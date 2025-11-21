@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nusantara Fresh - Traditional Indonesian Drinks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .tropical-gradient {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    }
+    
+    .sunset-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+    
+    .ocean-gradient {
+      background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+    }
+    
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    }
+    
+    .category-card {
+      transition: all 0.3s ease;
+    }
+    
+    .category-card:hover {
+      transform: scale(1.05);
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+    
+    .badge-new {
+      animation: bounce 1s ease-in-out infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full"><!-- Navigation -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 shadow-md backdrop-blur-md bg-white/90">
+   <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+     <div class="flex items-center space-x-3">
+      <div class="w-12 h-12 tropical-gradient rounded-2xl flex items-center justify-center shadow-lg"><span class="text-3xl">🥥</span>
+      </div>
+      <div>
+       <h1 id="brand-name" class="text-2xl font-bold">Nusantara Fresh</h1>
+       <p class="text-xs opacity-70">Traditional Indonesian Drinks</p>
+      </div>
+     </div>
+     <div class="hidden md:flex space-x-8"><a href="#home" class="hover:text-green-600 transition-colors duration-300 font-medium">Home</a> <a href="#popular" class="hover:text-green-600 transition-colors duration-300 font-medium">Popular</a> <a href="#signature" class="hover:text-green-600 transition-colors duration-300 font-medium">Signature</a> <a href="#offers" class="hover:text-green-600 transition-colors duration-300 font-medium">Offers</a> <a href="#contact" class="hover:text-green-600 transition-colors duration-300 font-medium">Contact</a>
+     </div><button id="cart-btn" class="btn-primary tropical-gradient text-white px-6 py-3 rounded-full font-semibold shadow-lg"> 🛒 Cart (0) </button>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section id="home" class="relative min-h-full flex items-center justify-center px-4 pt-20" style="background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%);">
+   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+    <div class="space-y-8">
+     <div class="inline-block tropical-gradient text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+      ✨ 100% Natural Ingredients
+     </div>
+     <h1 id="hero-title" class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">Taste the Freshness of Indonesia</h1>
+     <p id="hero-subtitle" class="text-xl md:text-2xl opacity-80 leading-relaxed">Authentic traditional beverages crafted with love and the finest local ingredients</p>
+     <div class="flex flex-wrap gap-4"><button id="hero-cta" class="btn-primary tropical-gradient text-white px-10 py-5 rounded-full text-lg font-bold shadow-xl"> Explore Drinks 🍹 </button> <button class="btn-primary bg-white border-2 border-green-500 text-green-600 px-10 py-5 rounded-full text-lg font-bold shadow-xl hover:bg-green-50"> Learn More </button>
+     </div>
+     <div class="flex items-center space-x-8 pt-4">
+      <div>
+       <div class="text-4xl font-bold text-green-600">
+        500+
+       </div>
+       <div class="text-sm opacity-70">
+        Happy Customers
+       </div>
+      </div>
+      <div class="w-px h-12 bg-gray-300"></div>
+      <div>
+       <div class="text-4xl font-bold text-green-600">
+        20+
+       </div>
+       <div class="text-sm opacity-70">
+        Drink Varieties
+       </div>
+      </div>
+      <div class="w-px h-12 bg-gray-300"></div>
+      <div>
+       <div class="text-4xl font-bold text-green-600">
+        4.9★
+       </div>
+       <div class="text-sm opacity-70">
+        Average Rating
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="relative">
+     <div class="absolute inset-0 tropical-gradient opacity-20 blur-3xl rounded-full"></div>
+     <div class="relative grid grid-cols-2 gap-4">
+      <div class="space-y-4">
+       <div class="bg-white rounded-3xl p-6 shadow-2xl card-hover">
+        <div class="text-8xl mb-4">
+         🍹
+        </div>
+        <h3 class="font-bold text-lg mb-2">Es Cendol</h3>
+        <p class="text-sm opacity-70">Sweet &amp; Creamy</p>
+       </div>
+       <div class="bg-white rounded-3xl p-6 shadow-2xl card-hover">
+        <div class="text-8xl mb-4">
+         🥭
+        </div>
+        <h3 class="font-bold text-lg mb-2">Es Teler</h3>
+        <p class="text-sm opacity-70">Tropical Mix</p>
+       </div>
+      </div>
+      <div class="space-y-4 pt-8">
+       <div class="bg-white rounded-3xl p-6 shadow-2xl card-hover">
+        <div class="text-8xl mb-4">
+         🍊
+        </div>
+        <h3 class="font-bold text-lg mb-2">Es Jeruk</h3>
+        <p class="text-sm opacity-70">Fresh Citrus</p>
+       </div>
+       <div class="bg-white rounded-3xl p-6 shadow-2xl card-hover">
+        <div class="text-8xl mb-4">
+         🌿
+        </div>
+        <h3 class="font-bold text-lg mb-2">Jamu Herbal</h3>
+        <p class="text-sm opacity-70">Traditional Health</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Categories Highlight -->
+  <section class="py-20 px-4" style="background: linear-gradient(180deg, #ffffff 0%, #fef3c7 100%);">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+     <h2 class="text-4xl md:text-5xl font-bold mb-4">Explore by Category</h2>
+     <p class="text-xl opacity-70">Discover your perfect refreshment</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+     <div class="category-card tropical-gradient rounded-3xl p-8 text-center text-white shadow-xl cursor-pointer">
+      <div class="text-6xl mb-4">
+       🧊
+      </div>
+      <h3 class="text-xl font-bold mb-2">Iced Drinks</h3>
+      <p class="text-sm opacity-90">12 varieties</p>
+     </div>
+     <div class="category-card sunset-gradient rounded-3xl p-8 text-center text-white shadow-xl cursor-pointer">
+      <div class="text-6xl mb-4">
+       🌿
+      </div>
+      <h3 class="text-xl font-bold mb-2">Herbal</h3>
+      <p class="text-sm opacity-90">8 varieties</p>
+     </div>
+     <div class="category-card ocean-gradient rounded-3xl p-8 text-center text-white shadow-xl cursor-pointer">
+      <div class="text-6xl mb-4">
+       🥤
+      </div>
+      <h3 class="text-xl font-bold mb-2">Fresh Juice</h3>
+      <p class="text-sm opacity-90">10 varieties</p>
+     </div>
+     <div class="category-card bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-center text-white shadow-xl cursor-pointer">
+      <div class="text-6xl mb-4">
+       🍵
+      </div>
+      <h3 class="text-xl font-bold mb-2">Hot Drinks</h3>
+      <p class="text-sm opacity-90">6 varieties</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Popular Drinks Section -->
+  <section id="popular" class="py-20 px-4 bg-white">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+     <div class="inline-block tropical-gradient text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+      🔥 Trending Now
+     </div>
+     <h2 id="popular-title" class="text-4xl md:text-5xl font-bold mb-4">Popular Drinks</h2>
+     <p class="text-xl opacity-70">Customer favorites you'll love</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Product 1 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="relative">
+       <div class="h-64 tropical-gradient flex items-center justify-center"><span class="text-9xl">🍹</span>
+       </div>
+       <div class="absolute top-4 right-4 badge-new bg-red-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+        BEST SELLER
+       </div>
+      </div>
+      <div class="p-6">
+       <div class="flex items-center justify-between mb-3">
+        <h3 class="text-2xl font-bold">Es Cendol</h3>
+        <div class="text-yellow-500 font-bold">
+         ★ 4.9
+        </div>
+       </div>
+       <p class="text-gray-600 mb-4">Sweet pandan jelly with creamy coconut milk and palm sugar</p>
+       <div class="flex items-center justify-between mb-4">
+        <div><span class="text-gray-400 line-through text-sm">Rp 20.000</span> <span class="text-3xl font-bold text-green-600 ml-2">Rp 15.000</span>
+        </div>
+       </div><button class="order-btn w-full tropical-gradient text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+      </div>
+     </div><!-- Product 2 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="relative">
+       <div class="h-64 sunset-gradient flex items-center justify-center"><span class="text-9xl">🥭</span>
+       </div>
+      </div>
+      <div class="p-6">
+       <div class="flex items-center justify-between mb-3">
+        <h3 class="text-2xl font-bold">Es Teler</h3>
+        <div class="text-yellow-500 font-bold">
+         ★ 4.8
+        </div>
+       </div>
+       <p class="text-gray-600 mb-4">Tropical fruit cocktail with avocado, jackfruit &amp; coconut</p>
+       <div class="flex items-center justify-between mb-4">
+        <div><span class="text-3xl font-bold text-green-600">Rp 25.000</span>
+        </div>
+       </div><button class="order-btn w-full sunset-gradient text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+      </div>
+     </div><!-- Product 3 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="relative">
+       <div class="h-64 ocean-gradient flex items-center justify-center"><span class="text-9xl">🍊</span>
+       </div>
+       <div class="absolute top-4 right-4 badge-new bg-green-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+        NEW
+       </div>
+      </div>
+      <div class="p-6">
+       <div class="flex items-center justify-between mb-3">
+        <h3 class="text-2xl font-bold">Es Jeruk Fresh</h3>
+        <div class="text-yellow-500 font-bold">
+         ★ 5.0
+        </div>
+       </div>
+       <p class="text-gray-600 mb-4">Freshly squeezed orange juice with ice and natural sweetness</p>
+       <div class="flex items-center justify-between mb-4">
+        <div><span class="text-3xl font-bold text-green-600">Rp 18.000</span>
+        </div>
+       </div><button class="order-btn w-full ocean-gradient text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Signature Recipes Section -->
+  <section id="signature" class="py-20 px-4" style="background: linear-gradient(180deg, #ffffff 0%, #ecfdf5 100%);">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+     <div class="inline-block sunset-gradient text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+      👨‍🍳 Chef's Special
+     </div>
+     <h2 id="signature-title" class="text-4xl md:text-5xl font-bold mb-4">Signature Nusantara Recipes</h2>
+     <p class="text-xl opacity-70">Traditional recipes passed down through generations</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Signature 1 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="flex flex-col md:flex-row">
+       <div class="w-full md:w-1/2 h-64 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center"><span class="text-9xl">🌿</span>
+       </div>
+       <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+        <h3 class="text-3xl font-bold mb-4">Jamu Kunyit Asam</h3>
+        <p class="text-gray-600 mb-6">Traditional turmeric &amp; tamarind health drink with natural spices</p>
+        <div class="text-3xl font-bold text-green-600 mb-6">
+         Rp 22.000
+        </div><button class="order-btn sunset-gradient text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+       </div>
+      </div>
+     </div><!-- Signature 2 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="flex flex-col md:flex-row">
+       <div class="w-full md:w-1/2 h-64 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center"><span class="text-9xl">🥥</span>
+       </div>
+       <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+        <h3 class="text-3xl font-bold mb-4">Es Kelapa Muda</h3>
+        <p class="text-gray-600 mb-6">Young coconut water straight from the tree with fresh coconut meat</p>
+        <div class="text-3xl font-bold text-green-600 mb-6">
+         Rp 20.000
+        </div><button class="order-btn tropical-gradient text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+       </div>
+      </div>
+     </div><!-- Signature 3 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="flex flex-col md:flex-row">
+       <div class="w-full md:w-1/2 h-64 bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center"><span class="text-9xl">🍵</span>
+       </div>
+       <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+        <h3 class="text-3xl font-bold mb-4">Wedang Ronde</h3>
+        <p class="text-gray-600 mb-6">Sweet ginger soup with glutinous rice balls and peanut filling</p>
+        <div class="text-3xl font-bold text-green-600 mb-6">
+         Rp 18.000
+        </div><button class="order-btn bg-gradient-to-r from-rose-500 to-pink-500 text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+       </div>
+      </div>
+     </div><!-- Signature 4 -->
+     <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-gray-100">
+      <div class="flex flex-col md:flex-row">
+       <div class="w-full md:w-1/2 h-64 bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center"><span class="text-9xl">🧊</span>
+       </div>
+       <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+        <h3 class="text-3xl font-bold mb-4">Es Cincau Hitam</h3>
+        <p class="text-gray-600 mb-6">Black grass jelly with palm sugar syrup and coconut milk</p>
+        <div class="text-3xl font-bold text-green-600 mb-6">
+         Rp 16.000
+        </div><button class="order-btn ocean-gradient text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"> Order Now 🛒 </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Special Offers Section -->
+  <section id="offers" class="py-20 px-4 bg-white">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+     <div class="inline-block bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 pulse-animation">
+      🎉 Limited Time Only
+     </div>
+     <h2 id="offers-title" class="text-4xl md:text-5xl font-bold mb-4">Special Offers</h2>
+     <p class="text-xl opacity-70">Don't miss out on these amazing deals!</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><!-- Offer 1 -->
+     <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+      <div class="absolute inset-0 tropical-gradient opacity-90"></div>
+      <div class="relative z-10 p-12 text-white">
+       <div class="text-6xl mb-6">
+        🎁
+       </div>
+       <h3 class="text-4xl font-bold mb-4">Buy 2 Get 1 Free!</h3>
+       <p class="text-xl mb-6 opacity-90">Purchase any 2 drinks and get the 3rd one absolutely free. Valid for all iced drinks.</p>
+       <div class="flex items-center space-x-4 mb-8">
+        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-2xl">
+         <div class="text-3xl font-bold">
+          2 Days
+         </div>
+         <div class="text-sm opacity-80">
+          Left
+         </div>
+        </div>
+        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-2xl">
+         <div class="text-3xl font-bold">
+          14 Hours
+         </div>
+         <div class="text-sm opacity-80">
+          Left
+         </div>
+        </div>
+       </div><button class="bg-white text-green-600 px-10 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"> Claim Offer Now </button>
+      </div>
+     </div><!-- Offer 2 -->
+     <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+      <div class="absolute inset-0 sunset-gradient opacity-90"></div>
+      <div class="relative z-10 p-12 text-white">
+       <div class="text-6xl mb-6">
+        ⚡
+       </div>
+       <h3 class="text-4xl font-bold mb-4">Flash Sale 50% OFF</h3>
+       <p class="text-xl mb-6 opacity-90">All herbal drinks at half price! Limited to first 100 customers only.</p>
+       <div class="flex items-center space-x-4 mb-8">
+        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-2xl">
+         <div class="text-3xl font-bold">
+          45
+         </div>
+         <div class="text-sm opacity-80">
+          Sold
+         </div>
+        </div>
+        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-2xl">
+         <div class="text-3xl font-bold">
+          55
+         </div>
+         <div class="text-sm opacity-80">
+          Remaining
+         </div>
+        </div>
+       </div><button class="bg-white text-orange-600 px-10 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"> Grab Now </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contact" class="py-20 px-4" style="background: linear-gradient(180deg, #ffffff 0%, #ecfdf5 100%);">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+     <h2 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
+     <p class="text-xl opacity-70">We'd love to hear from you!</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="bg-white rounded-3xl p-10 text-center shadow-xl card-hover border-2 border-gray-100">
+      <div class="w-20 h-20 tropical-gradient rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-4xl">📍</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3">Visit Us</h3>
+      <p class="text-gray-600 leading-relaxed">Jl. Nusantara No. 123<br>
+       Jakarta, Indonesia 12345</p>
+     </div>
+     <div class="bg-white rounded-3xl p-10 text-center shadow-xl card-hover border-2 border-gray-100">
+      <div class="w-20 h-20 sunset-gradient rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-4xl">📞</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3">Call Us</h3>
+      <p class="text-gray-600 leading-relaxed">+62 812-3456-7890<br>
+       +62 21-9876-5432</p>
+     </div>
+     <div class="bg-white rounded-3xl p-10 text-center shadow-xl card-hover border-2 border-gray-100">
+      <div class="w-20 h-20 ocean-gradient rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-4xl">✉️</span>
+      </div>
+      <h3 class="text-xl font-bold mb-3">Email Us</h3>
+      <p class="text-gray-600 leading-relaxed">hello@nusantarafresh.com<br>
+       support@nusantarafresh.com</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer id="footer" class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 px-4">
+   <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+     <div class="md:col-span-2">
+      <div class="flex items-center space-x-3 mb-6">
+       <div class="w-16 h-16 tropical-gradient rounded-2xl flex items-center justify-center shadow-lg"><span class="text-4xl">🥥</span>
+       </div>
+       <div>
+        <h3 id="footer-brand" class="text-3xl font-bold">Nusantara Fresh</h3>
+        <p class="text-sm opacity-70">Traditional Indonesian Drinks</p>
+       </div>
+      </div>
+      <p id="footer-tagline" class="text-lg opacity-80 mb-6 leading-relaxed">Bringing traditional Indonesian refreshment to your doorstep with authentic recipes and premium ingredients.</p>
+      <div class="flex space-x-4"><a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"> <span class="text-2xl">📘</span> </a> <a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"> <span class="text-2xl">📷</span> </a> <a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"> <span class="text-2xl">🐦</span> </a> <a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"> <span class="text-2xl">💬</span> </a>
+      </div>
+     </div>
+     <div>
+      <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+      <ul class="space-y-3">
+       <li><a href="#home" class="opacity-80 hover:opacity-100 transition-opacity">Home</a></li>
+       <li><a href="#popular" class="opacity-80 hover:opacity-100 transition-opacity">Popular Drinks</a></li>
+       <li><a href="#signature" class="opacity-80 hover:opacity-100 transition-opacity">Signature Recipes</a></li>
+       <li><a href="#offers" class="opacity-80 hover:opacity-100 transition-opacity">Special Offers</a></li>
+       <li><a href="#contact" class="opacity-80 hover:opacity-100 transition-opacity">Contact</a></li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-xl font-bold mb-6">Opening Hours</h4>
+      <ul class="space-y-3 opacity-80">
+       <li>Monday - Friday<br><span class="font-semibold">08:00 AM - 09:00 PM</span></li>
+       <li>Saturday - Sunday<br><span class="font-semibold">09:00 AM - 10:00 PM</span></li>
+      </ul>
+     </div>
+    </div>
+    <div class="border-t border-white/20 pt-8 text-center">
+     <p id="footer-copyright" class="opacity-70">© 2024 Nusantara Fresh. All rights reserved.</p>
+    </div>
+   </div>
+  </footer>
+  <script>
+    const defaultConfig = {
+      background_color: "#ffffff",
+      surface_color: "#ecfdf5",
+      text_color: "#1f2937",
+      primary_color: "#10b981",
+      accent_color: "#fbbf24",
+      font_family: "Poppins",
+      font_size: 16,
+      brand_name: "Nusantara Fresh",
+      hero_title: "Taste the Freshness of Indonesia",
+      hero_subtitle: "Authentic traditional beverages crafted with love and the finest local ingredients",
+      hero_button: "Explore Drinks 🍹",
+      popular_title: "Popular Drinks",
+      signature_title: "Signature Nusantara Recipes",
+      offers_title: "Special Offers",
+      footer_tagline: "Bringing traditional Indonesian refreshment to your doorstep with authentic recipes and premium ingredients.",
+      footer_copyright: "© 2024 Nusantara Fresh. All rights reserved."
+    };
+
+    let config = { ...defaultConfig };
+
+    async function onConfigChange(newConfig) {
+      const fontFamily = newConfig.font_family || defaultConfig.font_family;
+      const baseFontStack = 'system-ui, -apple-system, sans-serif';
+      const fontSize = newConfig.font_size || defaultConfig.font_size;
+      
+      document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.body.style.fontSize = `${fontSize}px`;
+      document.body.style.color = newConfig.text_color || defaultConfig.text_color;
+      
+      const brandName = document.getElementById('brand-name');
+      brandName.textContent = newConfig.brand_name || defaultConfig.brand_name;
+      brandName.style.color = newConfig.text_color || defaultConfig.text_color;
+      brandName.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      brandName.style.fontSize = `${fontSize * 1.5}px`;
+      
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.style.color = newConfig.text_color || defaultConfig.text_color;
+        link.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+        link.style.fontSize = `${fontSize}px`;
+      });
+      
+      const cartBtn = document.getElementById('cart-btn');
+      cartBtn.style.backgroundColor = newConfig.primary_color || defaultConfig.primary_color;
+      cartBtn.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      cartBtn.style.fontSize = `${fontSize}px`;
+      
+      const heroTitle = document.getElementById('hero-title');
+      heroTitle.textContent = newConfig.hero_title || defaultConfig.hero_title;
+      heroTitle.style.color = newConfig.text_color || defaultConfig.text_color;
+      heroTitle.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      heroTitle.style.fontSize = `${fontSize * 3.5}px`;
+      
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      heroSubtitle.textContent = newConfig.hero_subtitle || defaultConfig.hero_subtitle;
+      heroSubtitle.style.color = newConfig.text_color || defaultConfig.text_color;
+      heroSubtitle.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      heroSubtitle.style.fontSize = `${fontSize * 1.25}px`;
+      
+      const heroCta = document.getElementById('hero-cta');
+      heroCta.textContent = newConfig.hero_button || defaultConfig.hero_button;
+      heroCta.style.backgroundColor = newConfig.primary_color || defaultConfig.primary_color;
+      heroCta.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      heroCta.style.fontSize = `${fontSize * 1.125}px`;
+      
+      const popularTitle = document.getElementById('popular-title');
+      popularTitle.textContent = newConfig.popular_title || defaultConfig.popular_title;
+      popularTitle.style.color = newConfig.text_color || defaultConfig.text_color;
+      popularTitle.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      popularTitle.style.fontSize = `${fontSize * 3}px`;
+      
+      const signatureTitle = document.getElementById('signature-title');
+      signatureTitle.textContent = newConfig.signature_title || defaultConfig.signature_title;
+      signatureTitle.style.color = newConfig.text_color || defaultConfig.text_color;
+      signatureTitle.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      signatureTitle.style.fontSize = `${fontSize * 3}px`;
+      
+      const offersTitle = document.getElementById('offers-title');
+      offersTitle.textContent = newConfig.offers_title || defaultConfig.offers_title;
+      offersTitle.style.color = newConfig.text_color || defaultConfig.text_color;
+      offersTitle.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      offersTitle.style.fontSize = `${fontSize * 3}px`;
+      
+      const orderBtns = document.querySelectorAll('.order-btn');
+      orderBtns.forEach(btn => {
+        if (btn.classList.contains('tropical-gradient')) {
+          btn.style.backgroundColor = newConfig.primary_color || defaultConfig.primary_color;
+        } else if (btn.classList.contains('sunset-gradient')) {
+          btn.style.backgroundColor = newConfig.accent_color || defaultConfig.accent_color;
+        }
+        btn.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+        btn.style.fontSize = `${fontSize}px`;
+      });
+      
+      const footerBrand = document.getElementById('footer-brand');
+      footerBrand.textContent = newConfig.brand_name || defaultConfig.brand_name;
+      footerBrand.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      footerBrand.style.fontSize = `${fontSize * 1.875}px`;
+      
+      const footerTagline = document.getElementById('footer-tagline');
+      footerTagline.textContent = newConfig.footer_tagline || defaultConfig.footer_tagline;
+      footerTagline.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      footerTagline.style.fontSize = `${fontSize * 1.125}px`;
+      
+      const footerCopyright = document.getElementById('footer-copyright');
+      footerCopyright.textContent = newConfig.footer_copyright || defaultConfig.footer_copyright;
+      footerCopyright.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      footerCopyright.style.fontSize = `${fontSize}px`;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["brand_name", config.brand_name || defaultConfig.brand_name],
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["hero_button", config.hero_button || defaultConfig.hero_button],
+        ["popular_title", config.popular_title || defaultConfig.popular_title],
+        ["signature_title", config.signature_title || defaultConfig.signature_title],
+        ["offers_title", config.offers_title || defaultConfig.offers_title],
+        ["footer_tagline", config.footer_tagline || defaultConfig.footer_tagline],
+        ["footer_copyright", config.footer_copyright || defaultConfig.footer_copyright]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+      
+      config = window.elementSdk.config;
+      onConfigChange(config);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    let cartCount = 0;
+    const cartBtn = document.getElementById('cart-btn');
+    const heroCta = document.getElementById('hero-cta');
+    const orderBtns = document.querySelectorAll('.order-btn');
+    
+    function showNotification(message, type = 'success') {
+      const notification = document.createElement('div');
+      notification.textContent = message;
+      const bgColor = type === 'success' ? '#10b981' : '#f59e0b';
+      notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: ${bgColor};
+        color: white;
+        padding: 20px 32px;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        font-family: ${config.font_family || defaultConfig.font_family}, sans-serif;
+        font-size: ${(config.font_size || defaultConfig.font_size) * 1.125}px;
+        font-weight: 600;
+        animation: slideIn 0.3s ease;
+      `;
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => notification.remove(), 500);
+      }, 3000);
+    }
+    
+    cartBtn.addEventListener('click', () => {
+      if (cartCount === 0) {
+        showNotification('Your cart is empty! 🛒', 'info');
+      } else {
+        showNotification(`You have ${cartCount} items in your cart 🎉`);
+      }
+    });
+    
+    heroCta.addEventListener('click', () => {
+      document.getElementById('popular').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    
+    orderBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        cartCount++;
+        cartBtn.textContent = `🛒 Cart (${cartCount})`;
+        
+        const card = e.target.closest('.card-hover');
+        let productName = 'Product';
+        
+        if (card) {
+          const titleElement = card.querySelector('h3');
+          if (titleElement) {
+            productName = titleElement.textContent;
+          }
+        }
+        
+        showNotification(`✅ ${productName} added to cart!`);
+      });
+    });
+    
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const categoryName = card.querySelector('h3').textContent;
+        showNotification(`🔍 Showing ${categoryName}...`);
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a1e1a50918b4aca',t:'MTc2MzcwNjI1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
